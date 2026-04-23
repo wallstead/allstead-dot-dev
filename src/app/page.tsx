@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { EmailLink } from "./email-link";
 import { WordGlitch } from "./word-glitch";
 
 export default function Home() {
@@ -25,12 +26,7 @@ export default function Home() {
         </header>
 
         <nav className="mt-6 flex items-center gap-5 text-[15px] text-muted">
-          <a
-            href="mailto:willallstead@icloud.com"
-            className="hover:text-foreground transition-colors"
-          >
-            Email
-          </a>
+          <EmailLink className="hover:text-foreground transition-colors" />
           <span className="text-border">/</span>
           <a
             href="https://github.com/wallstead"
@@ -132,7 +128,7 @@ export default function Home() {
                 <Role
                   title="Director of Curriculum Engineering"
                   range="Mar 2024 – Present"
-                  body="Lead engineers across two product engineering teams building the systems and tools that power our learning products. Stack: TypeScript, AWS Lambda, DynamoDB, PostgreSQL, Elasticsearch, React. The work supports CharacterStrong's mission to create a more loving world through education."
+                  body="I lead engineers across two product engineering teams building the systems and tools that power our learning products. Stack: TypeScript, AWS Lambda, DynamoDB, PostgreSQL, Elasticsearch, React. This work supports CharacterStrong's mission to create a more loving world through education."
                 />
                 <Role
                   title="Full Stack Developer"
