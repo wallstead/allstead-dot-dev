@@ -30,8 +30,6 @@ export default function Home() {
           <span className="text-border">/</span>
           <a
             href="https://github.com/wallstead"
-            target="_blank"
-            rel="noopener noreferrer"
             className="hover:text-foreground transition-colors"
           >
             GitHub
@@ -39,8 +37,6 @@ export default function Home() {
           <span className="text-border">/</span>
           <a
             href="https://www.linkedin.com/in/willallstead/"
-            target="_blank"
-            rel="noopener noreferrer"
             className="hover:text-foreground transition-colors"
           >
             LinkedIn
@@ -56,8 +52,6 @@ export default function Home() {
             product engineering teams at{" "}
             <a
               href="https://characterstrong.com"
-              target="_blank"
-              rel="noopener noreferrer"
               className="underline decoration-border underline-offset-4 hover:decoration-foreground transition-colors"
             >
               CharacterStrong
@@ -69,8 +63,6 @@ export default function Home() {
             On the side, I&rsquo;m building{" "}
             <a
               href="https://bonsave.app"
-              target="_blank"
-              rel="noopener noreferrer"
               className="underline decoration-border underline-offset-4 hover:decoration-foreground transition-colors"
             >
               Bonsave
@@ -87,8 +79,6 @@ export default function Home() {
 
           <a
             href="https://bonsave.app"
-            target="_blank"
-            rel="noopener noreferrer"
             className="mt-5 block rounded-xl border border-border bg-surface p-6 transition-colors hover:border-foreground/30"
           >
             <div className="flex items-baseline justify-between gap-4">
