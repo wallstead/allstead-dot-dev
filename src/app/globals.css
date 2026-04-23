@@ -1,26 +1,89 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #faf8f4;
+  --foreground: #1a1814;
+  --muted: #6b655c;
+  --subtle: #8f887e;
+  --border: #eae5dc;
+  --surface: #f4f1ea;
+  --accent: #1a1814;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f0e0c;
+    --foreground: #ece8e0;
+    --muted: #8f887e;
+    --subtle: #6b655c;
+    --border: #25211c;
+    --surface: #16140f;
+    --accent: #ece8e0;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-feature-settings: "cv11", "ss01", "ss03";
+}
+
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
+@keyframes glitch-chroma {
+  0%,
+  100% {
+    text-shadow: none;
+    transform: translate(0, 0);
+  }
+  20% {
+    text-shadow:
+      -1px 0 rgba(255, 40, 120, 0.7),
+      1px 0 rgba(40, 200, 255, 0.7);
+    transform: translate(0.5px, 0);
+  }
+  40% {
+    text-shadow:
+      1px 0 rgba(255, 40, 120, 0.7),
+      -1px 0 rgba(40, 200, 255, 0.7);
+    transform: translate(-0.5px, 0.5px);
+  }
+  60% {
+    text-shadow:
+      -1px 0 rgba(255, 40, 120, 0.6),
+      1px 0 rgba(40, 200, 255, 0.6);
+    transform: translate(0, -0.5px);
+  }
+  80% {
+    text-shadow:
+      0.5px 0 rgba(255, 40, 120, 0.4),
+      -0.5px 0 rgba(40, 200, 255, 0.4);
+    transform: translate(-0.5px, 0);
+  }
+}
+
+.is-glitching {
+  animation: glitch-chroma 0.14s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .is-glitching {
+    animation: none;
+  }
 }
