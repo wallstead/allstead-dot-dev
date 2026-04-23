@@ -48,8 +48,8 @@ export default function Home() {
         </nav>
 
         <section className="mt-12 space-y-4 text-[17px] leading-relaxed text-foreground/90">
-          <p>
-            I&rsquo;m a <WordGlitch /> based in Reno, Nevada.
+          <p className="whitespace-nowrap">
+            I&rsquo;m a <WordGlitch />.
           </p>
           <p>
             I lead two
