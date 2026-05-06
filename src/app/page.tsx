@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { EmailLink } from "./email-link";
 import { WordGlitch } from "./word-glitch";
 
@@ -26,6 +27,13 @@ export default function Home() {
         </header>
 
         <nav className="mt-6 flex items-center gap-5 text-[15px] text-muted">
+          <Link
+            href="/blog"
+            className="hover:text-foreground transition-colors"
+          >
+            Writing
+          </Link>
+          <span className="text-border">/</span>
           <EmailLink className="hover:text-foreground transition-colors" />
           <span className="text-border">/</span>
           <a
@@ -116,7 +124,7 @@ export default function Home() {
               </div>
               <div className="mt-4 space-y-5">
                 <Role
-                  title="Director of Curriculum Engineering"
+                  title="Director of Engineering"
                   range="Mar 2024 – Present"
                   body="I lead engineers across two product engineering teams building the systems and tools that power our learning products. Stack: TypeScript, AWS Lambda, DynamoDB, PostgreSQL, Elasticsearch, React. This work supports CharacterStrong's mission to create a more loving world through education."
                 />
