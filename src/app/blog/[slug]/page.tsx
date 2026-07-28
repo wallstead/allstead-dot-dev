@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getPost, getPosts } from "@/posts";
 import { AuthorCard } from "../../author-card";
+import { LikeButton } from "./like-button";
 import { SiteFooter } from "../../site-footer";
 import { SiteHeader } from "../../site-header";
 
@@ -112,6 +113,10 @@ export default async function BlogPost({ params }: Params) {
             {post.body}
           </ReactMarkdown>
         </article>
+
+        <div className="mt-10">
+          <LikeButton slug={slug} />
+        </div>
 
         <AuthorCard />
 
