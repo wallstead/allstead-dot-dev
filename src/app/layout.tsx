@@ -49,7 +49,7 @@ const personSchema = {
   owns: {
     "@type": "SoftwareApplication",
     name: "Bonsave",
-    url: "https://bonsave.app",
+    url: "https://www.bonsave.app",
     applicationCategory: "FinanceApplication",
   },
 };

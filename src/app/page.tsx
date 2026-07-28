@@ -71,7 +71,7 @@ export default function Home() {
           <p>
             On the side, I&rsquo;m building{" "}
             <a
-              href="https://bonsave.app"
+              href="https://www.bonsave.app"
               className="underline decoration-border underline-offset-4 hover:decoration-foreground transition-colors"
             >
               Bonsave
@@ -87,7 +87,7 @@ export default function Home() {
           </h2>
 
           <a
-            href="https://bonsave.app"
+            href="https://www.bonsave.app"
             className="mt-5 block rounded-xl border border-border bg-surface p-6 transition-colors hover:border-foreground/30"
           >
             <div className="flex items-baseline justify-between gap-4">

@@ -24,7 +24,7 @@ export function AuthorCard() {
           </a>, and EdTech company,{" "}
           and I'm based out of Reno, Nevada. On the side I&rsquo;m building{" "}
           <a
-            href="https://bonsave.app"
+            href="https://www.bonsave.app"
             className="underline decoration-border underline-offset-4 hover:decoration-foreground transition-colors"
           >
             Bonsave
