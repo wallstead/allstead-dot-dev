@@ -44,6 +44,7 @@ const personSchema = {
   sameAs: [
     "https://github.com/wallstead",
     "https://www.linkedin.com/in/willallstead/",
+    "https://willisallstead.substack.com",
   ],
   owns: {
     "@type": "SoftwareApplication",

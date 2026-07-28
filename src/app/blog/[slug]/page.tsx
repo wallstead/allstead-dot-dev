@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getPost, getPosts } from "@/posts";
+import { AuthorCard } from "../../author-card";
+import { SiteFooter } from "../../site-footer";
 import { SiteHeader } from "../../site-header";
 
 type Params = { params: Promise<{ slug: string }> };
@@ -110,6 +112,10 @@ export default async function BlogPost({ params }: Params) {
             {post.body}
           </ReactMarkdown>
         </article>
+
+        <AuthorCard />
+
+        <SiteFooter />
       </main>
     </div>
   );

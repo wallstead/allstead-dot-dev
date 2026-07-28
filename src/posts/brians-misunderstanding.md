@@ -1,5 +1,5 @@
 ---
-title: Brian's Misunderstanding of Management in a World Rapidly Adopting AI
+title: Brian Armstrong's Misunderstanding of Management in a World Rapidly Adopting AI
 date: "2026-05-06"
 description: Brian Armstrong wants managers to have 15+ direct reports at Coinbase, which demonstrates a fundamental misunderstanding of management in a world rapidly adopting AI.
 ---

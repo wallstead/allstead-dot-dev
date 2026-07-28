@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { EmailLink } from "./email-link";
+import { SiteFooter } from "./site-footer";
 import { WordGlitch } from "./word-glitch";
 
 export default function Home() {
@@ -182,11 +183,7 @@ export default function Home() {
           </article>
         </section>
 
-        <footer className="mt-24 border-t border-border pt-6 text-[13px] text-subtle">
-          &copy; {new Date().getFullYear()}
-          {" "}
-          Willis Allstead &middot; Reno, Nevada
-        </footer>
+        <SiteFooter />
       </main>
     </div>
   );

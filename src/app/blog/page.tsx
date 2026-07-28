@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { getPosts } from "@/posts";
+import { SiteFooter } from "../site-footer";
 import { SiteHeader } from "../site-header";
 
 export const metadata: Metadata = {
@@ -19,7 +20,14 @@ export default function BlogIndex() {
           <h1 className="font-serif text-3xl tracking-tight">Writing</h1>
           <p className="mt-3 text-[17px] leading-relaxed text-muted">
             My thoughts on engineering, building products, and whatever
-            else is on my mind.
+            else is on my mind. I also write about money on{" "}
+            <a
+              href="https://willisallstead.substack.com"
+              className="underline decoration-border underline-offset-4 hover:decoration-foreground transition-colors"
+            >
+              Substack
+            </a>
+            .
           </p>
         </section>
 
@@ -45,6 +53,8 @@ export default function BlogIndex() {
             </li>
           ))}
         </ul>
+
+        <SiteFooter />
       </main>
     </div>
   );
