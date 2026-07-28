@@ -69,6 +69,11 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
         />
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="zNfUAsgjRqff4VD5j/ytqQ"
+          async
+        />
         {children}
       </body>
       {process.env.NEXT_PUBLIC_GA_ID && (
