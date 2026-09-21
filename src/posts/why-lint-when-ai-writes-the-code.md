@@ -1,7 +1,7 @@
 ---
-title: "Why Bother With Lint Rules If AI Writes the Code?"
+title: "Why Bother With Lint Rules If AI Writes your Code?"
 date: "2026-09-20"
-description: Lint used to be for making code readable and consistent. Now it's a contract between you and your coding agent, and that makes it more important, not less.
+description: Lint used to be for making code readable and consistent. Now it's an enforceable contract between you and your coding agent, and that makes it more important, not less.
 ---
 
 A few days ago I merged a change at work that swapped ESLint for [oxlint](https://oxc.rs/docs/guide/usage/linter.html) across our monorepo. Ruleset parity, just a different tool. A full local lint went from 3 minutes to about 1 second. It was a good day. Finally I could tell people we could stop pushing with `--no-verify`, a nasty workaround that had become muscle memory for basically all of us as a means of bypassing slow local lint checks.
