@@ -20,7 +20,7 @@ Since the [dawn of linting](https://web.archive.org/web/20220123141016/https://c
 
 It also catches a category of things that aren't really "style" at all. A promise that wasn't properly awaited. A `useEffect` with a dependency missing from its array (love you, React). A variable that's declared, assigned, and never read. These aren't example of style. They're bugs, or things on the way to becoming bugs, and we can automatically catch them before they cause issues.
 
-With AI writing code for us, those reader-facing and bug-catching jobs still exist. What's changed is who's writing and readingthe code.
+With AI writing code for us, those reader-facing and bug-catching jobs still exist. What's changed is who's writing and reading the code.
 
 ## The author changed. So did the readers.
 
