@@ -24,15 +24,15 @@ With AI writing code for us, those reader-facing and bug-catching jobs still exi
 
 ## The author changed. So did the readers.
 
-When I point a coding agent at a Jira ticket, what it writes is code that will be read by my teammates in review, and maybe read by me in a few months if something breaks. Those readers still exist, and every reader-facing reason for lint is as valid as it ever was.
+When I point a coding agent at a Jira ticket, what it writes is code that will be read by me before requesting reviews, my teammates in review, and maybe by some poor soul in a few months if something breaks. Those readers still exist, and every reader-facing reason for lint is as valid as it ever was pre-AI.
 
-But there's a ✨ new ✨ reader now, and it reads more of the codebase than any human does. Before an agent writes a line, it reads the surrounding files to figure out how things are done in the codebase. It's not doing this for fun, or to burn tokens, it's looking for **patterns to copy**.
+But there's a ✨ new ✨ reader in town, and it reads the codebase in a slightly different way than we do. Before an agent writes a line, it reads the surrounding files to figure out how things are done in the codebase. It's not doing this for fun, or to burn tokens, it's looking for **patterns to copy**.
 
 This makes codebase cleanliness compound in a way it didn't used to. Dead code and unused imports aren't just messy in the files they exist in, they're kind of poison to agents. Without a clean and consistent codebase, the agent can amplify those issues, spreading bad patterns with a codebase.
 
 Without carefully maintaining an `AGENTS.md` file that documents the conventions and patterns the agents should follow, the AI will continue to pick up and propagate whatever it finds, good or bad. Even if you do maintain that prompt file, the AI might still ignore it. Those prompt files should be treated as guidance, not truly enforceable rules. There are no guarantees there.
 
-This is where lint rules come to save the day. You create the set of rules, and the AI is forced to follow them just like a human would have to. There's the guarantee: code that violates those rules won't make it into your codebase because the linter will prevent pushing it. Well, it will if you set up a good CI/CD pipeline that enforces linting before merges, which you should!
+This is where good ol' lint rules come to save the day. You create the set of rules, and the AI is forced to follow them just like a human would have to. There's the guarantee: code that violates those rules won't make it into your codebase because the linter will prevent pushing it. Well, it will if you set up a good CI/CD pipeline that enforces linting before merges, which you should!
 
 ## Review is a tight bottleneck
 
