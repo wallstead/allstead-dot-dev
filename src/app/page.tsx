@@ -88,24 +88,43 @@ export default function Home() {
 
           <a
             href="https://www.bonsave.app"
-            className="mt-5 block rounded-xl border border-border bg-surface p-6 transition-colors hover:border-foreground/30"
+            className="group relative mt-5 block overflow-hidden rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-foreground/30 sm:p-7"
           >
-            <div className="flex items-baseline justify-between gap-4">
-              <h3 className="font-serif text-2xl leading-none">Bonsave</h3>
-              <span className="text-xs uppercase tracking-widest text-subtle">
-                bonsave.app
-              </span>
+            <span
+              aria-hidden
+              className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#276434]/[0.07] blur-2xl transition-opacity duration-500 group-hover:opacity-80 dark:bg-[#4e9a5b]/[0.12]"
+            />
+            <div className="relative flex items-start gap-4">
+              <Image
+                src="/bonsave-icon.svg"
+                alt=""
+                width={48}
+                height={48}
+                unoptimized
+                className="h-11 w-11 shrink-0 transition-transform duration-300 group-hover:-translate-y-0.5"
+              />
+              <div className="min-w-0 flex-1">
+                <div className="flex items-baseline justify-between gap-4">
+                  <h3 className="font-serif text-2xl leading-none">Bonsave</h3>
+                  <span className="text-xs uppercase tracking-widest text-subtle">
+                    bonsave.app
+                  </span>
+                </div>
+                <p className="mt-2 font-serif text-xl italic text-foreground/80">
+                  Grow your money. Intentionally.
+                </p>
+              </div>
             </div>
-            <p className="mt-3 font-serif text-xl italic text-foreground/80">
-              Grow your money. Intentionally.
-            </p>
-            <p className="mt-4 text-[15px] leading-relaxed text-muted">
+
+            <p className="relative mt-5 text-[15px] leading-relaxed text-muted">
               A personal finance app built around one idea: attention compounds.
               Each morning Bonnie, the built-in AI, delivers a single focused
-              observation about your accounts, spending, or goals. No
-              dashboards full of noise. Syncs 12,000+ institutions via Plaid,
-              tracks net worth, budgets, and subscriptions. iOS app shipping
-              May 2026.
+              observation about your accounts, spending, or goals. No dashboards
+              full of noise. Retirement projections run your real balances and
+              spending through a century of market history, so you see the
+              earliest age you can actually stop working and whether you&rsquo;re
+              ahead of plan or behind it. Syncs 12,000+ institutions via Plaid,
+              tracks net worth, budgets, and subscriptions. On iOS and the web.
             </p>
           </a>
         </section>
@@ -118,7 +137,14 @@ export default function Home() {
           <div className="mt-6 space-y-10">
             <article>
               <div className="flex items-baseline gap-2">
-                <h3 className="font-serif text-xl">CharacterStrong</h3>
+                <h3 className="font-serif text-xl">
+                  <a
+                    href="https://characterstrong.com"
+                    className="underline decoration-border underline-offset-4 hover:decoration-foreground transition-colors"
+                  >
+                    CharacterStrong
+                  </a>
+                </h3>
                 <span className="text-[13px] tabular-nums text-subtle">
                   · {durationText({ y: 2022, m: 4 }, "present")}
                 </span>
@@ -139,7 +165,14 @@ export default function Home() {
 
             <article>
               <div className="flex items-baseline gap-2">
-                <h3 className="font-serif text-xl">Noble Studios</h3>
+                <h3 className="font-serif text-xl">
+                  <a
+                    href="https://noblestudios.com"
+                    className="underline decoration-border underline-offset-4 hover:decoration-foreground transition-colors"
+                  >
+                    Noble Studios
+                  </a>
+                </h3>
                 <span className="text-[13px] tabular-nums text-subtle">
                   · {durationText({ y: 2018, m: 5 }, { y: 2022, m: 4 })}
                 </span>
@@ -172,7 +205,14 @@ export default function Home() {
 
           <article className="mt-6">
             <div className="flex items-baseline justify-between gap-4">
-              <h3 className="font-serif text-xl">University of Nevada, Reno</h3>
+              <h3 className="font-serif text-xl">
+                <a
+                  href="https://www.unr.edu"
+                  className="underline decoration-border underline-offset-4 hover:decoration-foreground transition-colors"
+                >
+                  University of Nevada, Reno
+                </a>
+              </h3>
               <span className="text-[13px] tabular-nums text-subtle">
                 2015 – 2019
               </span>
