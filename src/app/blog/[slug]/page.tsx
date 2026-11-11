@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { getPost, getPosts } from "@/posts";
 import { AuthorCard } from "../../author-card";
+import { Embed, EmbedGallery, embedsIn } from "./embed";
 import { LikeButton } from "./like-button";
 import { SiteFooter } from "../../site-footer";
 import { SiteHeader } from "../../site-header";
@@ -58,6 +59,17 @@ export default async function BlogPost({ params }: Params) {
           <ReactMarkdown
             remarkPlugins={[remarkGfm]}
             components={{
+              // A paragraph made only of bare supported URLs becomes embeds:
+              // one URL embeds in the text column, several (one per line)
+              // become a gallery.
+              p: ({ node, children }) => {
+                const embeds = node ? embedsIn(node) : null;
+                if (embeds?.length === 1) {
+                  return <Embed target={embeds[0].target} href={embeds[0].href} />;
+                }
+                if (embeds) return <EmbedGallery embeds={embeds} />;
+                return <p>{children}</p>;
+              },
               a: ({ href, children }) => (
                 <a
                   href={href}
